@@ -4,9 +4,9 @@
 	<title>My Portfolio</title>
 	<meta charset= "utf-8">
 	<meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name= "" content= "">
-	<meta name= "" content= "">
-	<meta name= "" content= "">
+	<meta name= "description" content= "this is my portfolio website">
+	<meta name= "keywords" content= "hire, software developer, developer, website. design">
+	<meta name= "Author" content= "Mr Kay">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;
@@ -22,28 +22,28 @@
 	font-family: 'Noto Sans', sans-serif;
 	font-family: 'Poppins', sans-serif;
 	}
-		div{
-			border: 1px solid red;
-			min-height: 100px;
-		}
+		<!-- div{ -->
+			<!-- border: 1px solid red; -->
+			<!-- min-height: 100px; -->
+		<!-- } -->
 		
 		.banner{
 			background-image: url(images/banner9.jpg);
 			height: 800px;
 			background-repeat: no-repeat;
 			background-size: cover;
-		}
-		
+		}	
 		.overlay{
-			height: 800px;
+			min-height: 800px;
 			background-color: rgba(12, 15, 10, 0.5);
 		}
-		
 		.navbar-brand{
 			color: #fff !important;
 			font-weight: bold;
 			font-size: 38px;
 		}
+		
+		
 		
 		span{
 			color: #ffdda1;
@@ -104,13 +104,78 @@
 		i:hover{
 			color: #ffdda1;
 		}
+		
+		<!-- img{ -->
+			<!-- border-radius: 10%; -->
+			<!-- height: 200px; -->
+			<!-- width: 200px; -->
+		<!-- } -->
+		
+		.about_me{
+			font-weight: bold;
+			color: #000;
+			
+		}
+		
+		.aboutMe{
+			background-color: #E3DAFF;
+		}
+		img{
+			box-shadow: 2px 5px 10px grey;
+		}
+		
+		.service_items{
+			margin-top: 30px;
+			box-shadow: 10px 10px 10px grey;
+		}
+		.bx-lg{
+			font-weight: bold;
+		}
+		.bx-lg:hover{
+			background-color: #ffdda1;
+			color: #000;
+		}
+		.submit_btn{
+			background-color: #ffdda1 !important;
+			border: none;
+			padding: 10px;
+			border-radius: 20px;
+		}
+		
+		footer{
+			background-color: #E3DAFF;
+			min-height: 100px;
+		}
 		@media (max-width: 768px){
 			.banner{
-				width: 100%;
+				background-image: url(images/banner9.jpg);
+				
+				<!-- background-repeat: no-repeat; -->
+				min-height: 100vh;
+				
+				
+			}
+			.navbar-brand{
+			color: #fff !important;
+			font-weight: bold;
+			font-size: 28px;
+			}
+			
+			.first_btn{
+				width: 7em;
 			}
 			
 			.second_btn{
 				margin-top: 10px;
+				width: 7em;
+			}
+			h2{
+				font-size: 32px;
+				font-weight: bold;
+			}
+			h5{
+				font-size: 20px;
+				font-weight: bold;
 			}
 		}
 	</style>
@@ -119,9 +184,10 @@
 <body>
 
 <!------- Header  --------------->
+
 <div class= "banner">
 <div class= "overlay">	
-		<nav class="navbar navbar-expand-lg navbar-light">
+		<nav class="navbar navbar-expand-lg navbar-light sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Dev<span>Cheff</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,19 +196,17 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="#service">Services</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href= "#">Testimonials</a>
-        </li>
+  
 		<li class="nav-item">
-          <a class="nav-link" href= "#">Contact</a>
+          <a class="nav-link" href= "#contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -154,9 +218,9 @@
 </nav>
 
 
- <div class= "container-fluid">
+ <div class= "container-fluid" id= "top">
 	<div class= "row">
-		<div class= "col-md text-center text">
+		<div class= "col-md-12 text-center text">
 			<h2>I AM CONFIDENCE</h2>
 			<h5>A Software Developer</h5>
 			
@@ -177,55 +241,187 @@
 </div>
 </div>
 <!------- about  --------------->
-<div class= "container-fluid mt-5">
+<div class= "container-fluid aboutMe">
 	<div class= "row">
-		<div class= "col-md-5">image</div>
-		<div class= "col-md-7">content</div>
-	</div>
-</div>
-
-<!------- my skills  --------------->
-<div class= "container-fluid mt-5">
-	<div class= "row">
-		<div class= "col-md-3">service</div>
-		<div class= "col-md-3">service</div>
-		<div class= "col-md-3">service</div>
-		<div class= "col-md-3">service</div>
+		<div class= "col-md-5 mt-3">
+			<img src= "images/mine.jpg" alt= "about_me" class= "img-fluid rounded">
+		</div>
+	
+		<div class= "col-md-7">
+			<div class= "about_section mt-5">
+				<h2 id= "about">About Me</h2>
+				<h4>Software Developer</h4>
+			</div>
+			
+			<div class= "mt-3">
+				<p><span class= "about_me">Name:</span> Confidence Ezeji</p>
+				<p><span class= "about_me">Profile:</span> Full Stack Software Engineer</p>
+				<p><span class= "about_me">Email:</span> confidenceezeji8@gmail.com</p>
+				<p><span class= "about_me">Phone:</span> +234 816 352 0899</p>
+			</div>
+			
+			<div class= "myprogress mt-5">
+			<h3><b>My Skills</b></h3>
+			
+			<div class="progress mt-4">
+			<div class="progress-bar w-75  progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+			</div>
+			<b>Html</b>
+			
+			<div class="progress mt-4">
+			<div class="progress-bar w-75 progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+			</div>
+			<b>CSS</b>
+			<div class="progress mt-4">
+			<div class="progress-bar w-50 progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">60%</div>
+			</div>
+			<b>Bootstrap</b>
+			<div class="progress mt-4">
+			<div class="progress-bar w-50 progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">50%</div>
+			</div>
+			<b>Javascript</b>
+			</div>
+		</div>
 	</div>
 </div>
 
 <!------- my services  --------------->
 <div class= "container-fluid mt-5">
 	<div class= "row">
-		<div class= "col-md-6">progress-bar</div>
-		<div class= "col-md-6">progress-bar</div>
+	<h2 class= "text-center" id= "service">Services</h2>
+		<div class= "col-md-4">
+			<div class= "service_items">
+				<i class='bx bxl-sketch bx-lg'></i>
+				<h3><b>DESIGN</b></h3>
+				<p>
+					Successful online projects start with good design.
+					It establishes a solid foundation for future development
+					and allows for long term growth.
+				</p>
+			</div>
+		</div>
+		<div class= "col-md-4">
+			<div class= "service_items">
+				<i class='bx bx-expand-horizontal bx-lg'></i>
+				<h3><b>DEVELOPMENT</b></h3>
+				<p>
+					I can code my own designs or even use the customer's design as base.
+					My focus is to generate clean code that's well structured for reliability.
+				</p>
+			</div>
+		</div>
+		<div class= "col-md-4">
+			<div class= "service_items">
+				<i class='bx bx-desktop bx-lg'></i>
+				<h3><b>BASIC SEO</b></h3>
+				<p>
+					I can setup your project to use basic SEO principles which will
+					push your project to the first page on search engines and save you ads money
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<!------- recent works  --------------->
+<hr>
+
+<!----- testimonials  ------------->
 <div class= "container-fluid mt-5">
 	<div class= "row">
-		<div class= "col-md-4">works</div>
-		<div class= "col-md-4">works</div>
-		<div class= "col-md-4">works</div>
+	<h3 class= "text-center">Frequently asked questions</h3>
+		<div class= "col-md-12">
+			<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <b>How can i contact you and quickly get a quote on my online project?</b>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <b>Will i recieve any included maintenance or warranty after project delivery?</b>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <b>If something goes wrong with the project can i have my money back?</b>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
 	</div>
 </div>
 
-<!------- testimonials  --------------->
+<!------- contact  --------------->
 <div class= "container-fluid mt-5">
 	<div class= "row">
-		<div class= "col-md-4">testimonials</div>
-		<div class= "col-md-4">testimonials</div>
-		<div class= "col-md-4">testimonials</div>
-	</div>
-</div>
-
+	<h2 class= "text-center" id= "contact">Contact details</h2>
+		<div class= "col-md-8">
+			<form class= "form-lable">
+			<div>
+				<label class= "form-lable">Full Name</label>
+				<input type= "text" name= "username" class= "form-control">
+			</div>
+			<div>
+				<label class= "form-lable">Email</label>
+				<input type= "email" name= "mail" class= "form-control">
+			</div>
+			<div>
+				<label class= "form-lable">password</label>
+				<input type= "password" name= "pwd" class= "form-control">
+			</div>
+			<div>
+				<label class= "form-lable">Message</label>
+				<textarea class= "form-control"></textarea>
+			</div>
+			<div class= "mt-3">
+				<button type= "submit" class= "submit_btn col-12">Submit</button>
+			</div>
+			
+			</form>
+		</div>
 <!------- footer  --------------->
-<div class= "container-fluid mt-5">
-	<div class= "row">
-		<div class= "col-md-4">foot</div>
-		<div class= "col-md-4">questionair</div>
-		<div class= "col-md-4">works</div>
+<footer class= "mt-3">	
+		<div class= "container-fluid">
+			<div class= "row">
+				<div class= "col-md-12">
+					<div class= "icons text-center mt-3">
+						<i class='bx bxl-github'></i>
+						<i class='bx bxl-twitter'></i>
+						<i class='bx bxl-facebook-circle'></i>
+						<i class='bx bxl-linkedin-square'></i>
+					</div>
+					<p class= "text-center">
+						&COPY 2022/2023	DEVCHEFF ALL RIGHT RESERVED<br>
+						Designed by MrKay
+					</p>
+					<div class= "text-end">
+						<a href= "#top"><i class='bx bx-up-arrow-alt'></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </div>
 <script src= "bootstrap/js/bootstrap.bundle.min.js" type= "text/javascript"></script>
